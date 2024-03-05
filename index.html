@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRepository</title>
+</head>
+<body bgcolor="#FFFFFF">
+    <label for="link">Embed Link:&nbsp;</label>
+    <input type="text" id="link">
+    <button type="button" id="button">Enter</button>
+    <div id="container"></div>
+
+    <script>
+        var link = document.getElementById("link");
+        var button = document.getElementById("button");
+        var container = document.getElementById("container");
+
+        button.addEventListener("click", () => {
+            var newDiv = document.createElement("div");
+            newDiv.innerHTML = link.value;
+            container.appendChild(newDiv);
+        });
+    </script>
+</body>
+</html>
